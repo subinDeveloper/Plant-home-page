@@ -11,6 +11,23 @@
     <script>
         tailwind.config = {
           theme: {
+            screens: {
+              "xs":"420px",
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    },
             extend: { 
                 fontfamily:{
                     poopins:"Popppins",
@@ -28,11 +45,11 @@
     <title>Document</title>
 </head>
 <body class="overflow-hidden">
-    <div class="px-24 py-4">
+    <div class="px-10 lg:px-24 py-4">
         <img src="./CSS Assignment 3 img/03_flowerCut.png" alt=""
-        class="absolute bottom-0 right-0  z-[-1] max-w-[40%] max-auto ">
-        <nav class="flex items-ceneter h-24  justify-between ">
-           <img src="./CSS Assignment 3 img/Logo.svg" alt="" class="w-[150px]"> 
+        class="absolute bottom-0 right-0  z-[-1] max-w-[40%] max-auto lg:w-[450px]">
+        <nav class="flex items-ceneter h-24  justify-between items-center ">
+           <img src="./CSS Assignment 3 img/Logo.svg" alt="" class="w-[120px] h-full "> 
            <ul class="hidden lg:flex items-ceneter py-2 text-xl gap-16 font-semibold">
             <li class="underline">Home</li>
             <li>Collection</li>
@@ -40,7 +57,7 @@
             <li>About</li>
             <li>Contact</li>
            </ul>
-           <div class="flex items-center py-2 gap-8">
+           <div class="flex items-center py-2 gap-4 lg:gap-8">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
               </svg>
@@ -61,20 +78,20 @@
          
                 <div class="flex flex-col gap-8 justify-center h-full">
               <h1 class="font-headText font-Black font-bold text-6xl lg:text-9xl ">MONSTERA</h1>
-                <p class="text-2xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Quasi id doloremque odit? Voluptatem ratione amet eos ducimus! Quae,<br> unde perspiciatis.partayshs 
+                <p class="text-md lg:text-2xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Quasi id doloremque odit? Voluptatem ratione amet eos ducimus! Quae,<br> unde perspiciatis.partayshs 
                 gyudh hstdgssvyst.</p>
                 </div>
                 <div>
-                    <button class=" flex justify-center items-center  h-20 w-80 bg-[#1d5426] text-white border border-black text-4xl rounded-full gap-2 font-semibold">DISCOVER <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 items-center flex text-5xl">
+                    <button class=" flex justify-center items-center px-6 py-2 bg-[#1d5426] text-white border border-black text-xl lg:text-4xl rounded-full gap-2 font-semibold">DISCOVER <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 items-center flex text-5xl">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                       </svg>
                       </button>
                    </div>
                    <div>
-                    <div class="absolute w-3 h-3 bg-black rounded-full text-transparent  left-[50px] top-[250px]">1</div>
-                    <div class="absolute w-3 h-3 bg-black rounded-full text-transparent left-[50px] top-[300px]">1</div>
-                    <div class="absolute w-3 h-3 bg-black rounded-full text-transparent left-[50px] top-[350px]">1</div>
-                    <div class="absolute w-3 h-3 bg-black rounded-full text-transparent left-[50px] top-[400px]">1</div>
+                    <div class="absolute w-3 h-3 bg-black rounded-full text-transparent  left-[10px] lg:left-[50px] top-[250px]">1</div>
+                    <div class="absolute w-3 h-3 bg-black rounded-full text-transparent left-[10px] lg:left-[50px] top-[300px]">1</div>
+                    <div class="absolute w-3 h-3 bg-black rounded-full text-transparent left-[10px] lg:left-[50px] top-[350px]">1</div>
+                    <div class="absolute w-3 h-3 bg-black rounded-full text-transparent left-[10px] lg:left-[50px] top-[400px]">1</div>
 
                     <!-- footer -->
                    
@@ -102,6 +119,7 @@
                     <div class="flex items-center gap-2 w-[300px] ">
                        <i class="fa-solid fa-trowel h-15 w-15 font-semibold text-6xl"></i>
                     <div>
+            
                       <h1>Care</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
